@@ -1,0 +1,39 @@
+@charset "utf-8";
+@import "../node_modules/bulma/bulma.sass";
+
+.is-bold {
+  font-weight: bold;
+}
+
+.is-semibold {
+  font-weight: 600;
+}
+
+.resume-list {
+  list-style: disc;
+  margin-left: 1em;
+}
+
+.project-link {
+  font-weight: bold;
+  color: $text;
+  text-decoration: underline;
+}
+
+.education,
+.experience,
+.projects,
+.skills,
+.certifications,
+.awards {
+  margin-bottom: 1.25rem;
+}
+
+.column .title {
+  border-bottom: 1px solid $info;
+  padding: 0.25rem;
+}
+
+.is-underlined {
+  text-decoration: underline;
+}
