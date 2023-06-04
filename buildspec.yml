@@ -1,0 +1,24 @@
+version: 0.2
+env:
+  variables:
+    S3_BUCKET_NAME: bucket
+    BUILD_FOLDER_NAME: dist
+phases:
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies...
+      - npm install
+      - npm install -g @angular/cli
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Compiling the dist folder...
+      - npm run build
+  post_build:
+    commands:
+      - aws s3 cp ${BUILD_FOLDER_NAME} s3://${S3_BUCKET_NAME} --recursive --acl public-read --cache-control "max-age=86400"
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - "**/*"
+  base-directory: "dist*"
