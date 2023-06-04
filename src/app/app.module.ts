@@ -3,11 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PostComponent } from './post/post.component';
 import { BlogComponent } from './blog/blog.component';
-import { ResumeComponent } from './resume/resume.component';
-import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { PostComponent } from './post/post.component';
 import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
@@ -15,16 +13,11 @@ import { ProjectsComponent } from './projects/projects.component';
     AppComponent,
     PostComponent,
     BlogComponent,
-    ResumeComponent,
-    AboutComponent,
     ContactComponent,
-    ProjectsComponent
+    ProjectsComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
