@@ -40,13 +40,21 @@
         </span>
       </a>
     </div>
-    <span class="navbar-burger" data-target="navbarMenuHeroB">
-      <span></span>
-      <span></span>
-      <span></span>
-    </span>
+    <a
+      role="button"
+      (click)="navbarToggle()"
+      class="navbar-burger"
+      [class.is-active]="isActive"
+      aria-label="menu"
+      aria-expanded="false"
+      data-target="navMenu"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
   </div>
-  <div id="navbarMenuHeroB" class="navbar-menu mx-5">
+  <div id="navMenu" class="navbar-menu mx-5" [class.is-active]="isActive">
     <div class="navbar-start">
       <a
         routerLink="/resume"
@@ -57,7 +65,7 @@
       >
       <a href="https://dev.to/peterrauscher" class="navbar-item">Blog</a>
     </div>
-    <div class="navbar-end">
+    <div class="navbar-end is-hidden-touch">
       <a class="navbar-item" href="https://github.com/peterrauscher">
         <span class="icon">
           <i class="fab fa-github"></i>
