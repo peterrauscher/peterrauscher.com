@@ -1,4 +1,8 @@
 version: 0.2
+env:
+  variables:
+    BUCKET_NAME: peterrauscher.com
+    DISTRIBUTION_ID: E34HJHH2D2T6HS
 phases:
   pre_build:
     commands:
@@ -13,6 +17,10 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
+      - echo Deleting existing site files...
+      - aws s3 sync dist s3://${BUCKET_NAME}/ --delete
+      - echo Invalidating CloudFront cache...
+      - aws cloudfront create-invalidation --distribution-id ${DISTRIBUTION_ID} --paths "/*"
 artifacts:
   files:
     - "**/*"
