@@ -13,6 +13,12 @@ const THUMBNAIL_OUTPUT_DIRECTORY = path.join(
 const OUTPUT_FILE = path.join(__dirname, "src/posts.json");
 const OUTPUT_DIRECTORY = path.join(__dirname, "posts/dist");
 
+[THUMBNAIL_OUTPUT_DIRECTORY, OUTPUT_DIRECTORY].forEach((folder) => {
+  if (!fs.existsSync(folder)) {
+    fs.mkdirSync(folder, { recursive: true });
+  }
+});
+
 let files = [];
 try {
   try {
