@@ -5,7 +5,12 @@ const showdown = require("showdown");
 const converter = new showdown.Converter();
 
 const MARKDOWN_DIRECTORY = path.join(__dirname, "posts");
-const OUTPUT_FILE = path.join(__dirname, "posts.json");
+const THUMBNAIL_DIRECTORY = path.join(__dirname, "posts/thumbnails");
+const THUMBNAIL_OUTPUT_DIRECTORY = path.join(
+  __dirname,
+  "src/assets/thumbnails"
+);
+const OUTPUT_FILE = path.join(__dirname, "src/posts.json");
 const OUTPUT_DIRECTORY = path.join(__dirname, "posts/dist");
 
 let files = [];
@@ -54,10 +59,20 @@ try {
       );
     }
   });
+
+  console.log(`Rendered ${files.length} files`);
+
+  fs.readdirSync(THUMBNAIL_DIRECTORY).forEach((f) => {
+    fs.copyFileSync(
+      path.join(THUMBNAIL_DIRECTORY, f),
+      path.join(THUMBNAIL_OUTPUT_DIRECTORY, f)
+    );
+    console.log(`Copied thumbnail ${f} to ${THUMBNAIL_OUTPUT_DIRECTORY}`);
+  });
 } catch (error) {
   console.error(error.message);
   process.exit(1);
 }
-console.log(`Rendered ${files.length} files`);
+
 console.log(`Done!`);
 process.exit(0);
