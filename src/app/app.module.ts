@@ -10,6 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PostComponent } from './post/post.component';
 import { ResumeComponent } from './resume/resume.component';
 import { FooterComponent } from './footer/footer.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FooterComponent } from './footer/footer.component';
     NavbarComponent,
     ResumeComponent,
     FooterComponent,
+    PageNotFoundComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

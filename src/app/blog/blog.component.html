@@ -1,18 +1,12 @@
 <div class="main section container pt-0">
   <div *ngFor="let post of posts" class="box is-rounded p-0">
-    <a class="nostyle" [href]="post.permalink">
+    <a class="nostyle" [href]="'/blog/' + post.permalink">
       <div class="columns">
-        <div
-          class="column is-one-fifth is-thumbnail is-hidden-mobile"
-          [style]="post.thumbnail"
-        ></div>
+        <div class="column is-one-fifth is-thumbnail is-hidden-mobile" [style]="post.thumbnail"></div>
         <div class="column is-four-fifths">
           <div class="content px-3 py-1">
             <h3 class="title is-3 mb-2 no-border">{{ post.title }}</h3>
-            <p
-              class="mb-2"
-              [innerHTML]="post.content.substring(0, 180) + '...'"
-            ></p>
+            <p class="mb-2" [innerHTML]="post.content.substring(0, 180) + '...'"></p>
             <span class="tag is-info is-light">{{ post.date }}</span>
           </div>
         </div>

@@ -125,14 +125,3 @@ Here, we added an extra argument `cont`, our continuation function. In each recu
 ### Which to use?
 
 As with everything nice like this, there's not a clear answer. Some problems may not work using an accumulator variable, whereas others will. Ultimately, when possible, an accumulator is _preferred_ because it's easier to read and implement. But, when the problem requires (example: depth of a binary tree) don't be afraid to implement a continuation-passing style function callback that gets the job done efficiently.
-
-## Thanks for Reading!
-
-If you enjoyed this write-up, you'll love everything else we offer over at [devbranch.co](https://devbranch.co)! We cover more awesome topics like this one, we have a [newsletter](https://devbranch.co/newsletter) to keep you constantly informed, and we regularly post exclusive discounts on things like hosting, domain names, and tech.
-
-### Contact the Author
-
-[![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/peterauscher)
-[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/peterrauscher)
-[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/peter-rauscher)
-[![Protonmail](https://img.shields.io/badge/ProtonMail-8B89CC?style=for-the-badge&logo=protonmail&logoColor=white)](mailto:peterrauscher@protonmail.com)

@@ -1,5 +1,7 @@
-<div class="main section container content pt-0">
-  <h3 class="title is-3 mb-2">{{ title }}</h3>
-  <span class="tag is-info is-light">{{ date }}</span>
-  <section class="section content" [innerHTML]="content"></section>
+<div class="main section container pt-0">
+  <div class="block is-fullwidth">
+    <h1 class="title is-1">{{ meta.title }}</h1>
+    <p class="has-text-grey">Published {{ meta.date }}</p>
+  </div>
+  <div class="content is-medium" [innerHTML]="content"></div>
 </div>
