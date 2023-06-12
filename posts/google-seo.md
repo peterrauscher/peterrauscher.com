@@ -3,6 +3,7 @@ title: How to Rank Your Site Higher on Google
 date: 2022-03-31
 published: true
 thumbnail: google-seo.jpg
+permalink: google-seo
 ---
 
 Are you looking for ways to improve your website's ranking on Google? Ranking high on search engines is **essential** for businesses or content creators to reach their target audience and drive more traffic to their site. I'll say that again, you _really_ need to know who your audience is to effectively follow this guide. Any content that is aimed at too general a population will inevitably be edged out by huge competitors. Niche markets are key here. Anyways, let's get into it!

@@ -5,3 +5,19 @@
 .is-thumbnail {
   border-radius: 6px 0 0 6px;
 }
+
+a.nostyle:link {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
+}
+
+a.nostyle:visited {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
+}
+
+a:hover .title {
+  text-decoration: underline;
+}

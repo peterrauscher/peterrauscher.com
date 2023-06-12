@@ -3,6 +3,7 @@ title: Leveraging tail recursion for faster runtimes and smaller footprints
 date: 2022-03-28
 published: true
 thumbnail: tail-recursion.jpg
+permalink: tail-recursion
 ---
 
 Recursion is a programming concept you probably already know from studying data structures and algorithms. It's a highly readable, easily understandable way of writing methods that involves a call to itself within its definition. However, iterative code that utilizes loops and shared memory is often more efficient in both memory and CPU usage. As StackOverflow user [Leigh Caldwell](https://stackoverflow.com/users/3267/leigh-caldwell) puts it,

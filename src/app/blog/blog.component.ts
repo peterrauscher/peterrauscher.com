@@ -6,6 +6,7 @@ interface Post {
   date: string;
   content: string;
   thumbnail: string;
+  permalink: string;
 }
 
 let postData = posts.map((p) => {
@@ -18,6 +19,7 @@ let postData = posts.map((p) => {
     }),
     content: p.content,
     thumbnail: `background-image: url("/assets/thumbnails/${p.data.thumbnail}"); background-position: center; background-size: cover;`,
+    permalink: p.data.permalink,
   };
   return post;
 });
