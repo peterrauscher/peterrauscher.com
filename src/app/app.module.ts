@@ -11,6 +11,7 @@ import { PostComponent } from './post/post.component';
 import { ResumeComponent } from './resume/resume.component';
 import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ResumeComponent,
     FooterComponent,
     PageNotFoundComponent,
+    HighlightDirective,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
