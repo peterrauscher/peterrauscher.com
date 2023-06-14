@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import posts from 'src/posts.json';
+import hljs from 'highlight.js';
+import { DOCUMENT } from '@angular/common';
 
 interface Post {
   title: string;
@@ -29,7 +31,7 @@ let postData = posts.map((p) => {
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.scss'],
 })
-export class PostComponent implements OnInit {
+export class PostComponent implements OnInit, AfterViewInit {
   postlink = '';
   meta: Post = {
     title: '',
@@ -40,7 +42,11 @@ export class PostComponent implements OnInit {
   };
   content = '';
 
-  constructor(private route: ActivatedRoute, private router: Router) {}
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
   ngOnInit(): void {
     this.postlink = this.route.snapshot.params['postlink'];
     let postMeta = postData.find((p) => p.permalink === this.postlink);
@@ -50,5 +56,10 @@ export class PostComponent implements OnInit {
     } else {
       this.router.navigate(['/not-found']);
     }
+  }
+  ngAfterViewInit(): void {
+    this.document.querySelectorAll('code').forEach((el) => {
+      hljs.highlightElement(el as HTMLElement);
+    });
   }
 }

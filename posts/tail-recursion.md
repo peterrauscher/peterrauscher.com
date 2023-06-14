@@ -23,9 +23,9 @@ First, let's look at how you might intuitively solve this problem using traditio
 ```python
 def sum(array):
     if array == []:
-	return 0
+	    return 0
     else:
-	return array[0] + sum(array[1:])
+	    return array[0] + sum(array[1:])
 ```
 
 Consider how the computer executes this code when the function call is `sum([1, 2, 3, 4, 5])`:
@@ -53,9 +53,9 @@ That was a lot of work to get our answer! Notice how the computer didn't start c
 # runningSum defaults to 0 if only one argument is given
 def sum(array, runningSum = 0):
     if array == []:
-	return runningSum
+	    return runningSum
     else:
-	return sum(array[1:], runningSum + array[0])
+	    return sum(array[1:], runningSum + array[0])
 ```
 
 Here, our execution trace looks more like this:
