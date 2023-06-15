@@ -68,13 +68,13 @@ try {
 
   console.log(`Rendered ${files.length} files`);
 
-  fs.readdirSync(THUMBNAIL_DIRECTORY).forEach((f) => {
-    fs.copyFileSync(
-      path.join(THUMBNAIL_DIRECTORY, f),
-      path.join(THUMBNAIL_OUTPUT_DIRECTORY, f)
-    );
-    console.log(`Copied thumbnail ${f} to ${THUMBNAIL_OUTPUT_DIRECTORY}`);
-  });
+  // fs.readdirSync(THUMBNAIL_DIRECTORY).forEach((f) => {
+  //   fs.copyFileSync(
+  //     path.join(THUMBNAIL_DIRECTORY, f),
+  //     path.join(THUMBNAIL_OUTPUT_DIRECTORY, f)
+  //   );
+  //   console.log(`Copied thumbnail ${f} to ${THUMBNAIL_OUTPUT_DIRECTORY}`);
+  // });
 } catch (error) {
   console.error(error.message);
   process.exit(1);

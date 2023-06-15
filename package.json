@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "node buildblog.js && ng build",
+    "build": "node minify.mjs && node buildblog.js && ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -21,6 +21,8 @@
     "bulma": "^0.9.4",
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.8.0",
+    "imagemin": "^8.0.1",
+    "imagemin-jpegtran": "^7.0.0",
     "rxjs": "~7.8.0",
     "showdown": "^2.1.0",
     "tslib": "^2.3.0",
