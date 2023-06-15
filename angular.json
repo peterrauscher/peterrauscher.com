@@ -20,19 +20,11 @@
             "outputPath": "dist/peterrauscher.com",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/assets/img/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss",
-              "src/code-highlighting.css"
-            ],
+            "assets": ["src/assets/img/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss", "src/code-highlighting.css"],
             "scripts": []
           },
           "configurations": {
@@ -40,7 +32,7 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
+                  "maximumWarning": "5000kb",
                   "maximumError": "1mb"
                 },
                 {
@@ -83,20 +75,11 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/assets/img/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss",
-              "src/code-highlighting.css"
-            ],
+            "assets": ["src/assets/img/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss", "src/code-highlighting.css"],
             "scripts": []
           }
         }
