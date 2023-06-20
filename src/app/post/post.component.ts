@@ -1,8 +1,8 @@
+import { DOCUMENT } from '@angular/common';
 import { AfterViewInit, Component, Inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import posts from 'src/posts.json';
 import hljs from 'highlight.js';
-import { DOCUMENT } from '@angular/common';
+import posts from 'src/posts.json';
 
 interface Post {
   title: string;
@@ -12,7 +12,7 @@ interface Post {
   permalink: string;
 }
 
-let postData = posts.map((p) => {
+let postData = posts.filter(Boolean).map((p) => {
   const post: Post = {
     title: p.data.title,
     date: new Date(p.data.date).toLocaleDateString('en-US', {

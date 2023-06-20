@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "node minify.mjs && node buildblog.js && ng build",
+    "start": "gulp && node buildblog.js && ng serve",
+    "build": "gulp && node buildblog.js && ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -33,6 +33,8 @@
     "@angular/cli": "~16.0.4",
     "@angular/compiler-cli": "^16.0.0",
     "@types/jasmine": "~4.3.0",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^8.0.0",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
