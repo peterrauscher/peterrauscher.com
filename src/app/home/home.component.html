@@ -1,6 +1,6 @@
 <div class="main section container pt-0">
-  <section class="content is-medium">
-    <p class="title is-1">Hey 👋 I'm Peter.</p>
+  <section class="content is-large">
+    <p class="title is-2">Hey 👋 I'm Peter.</p>
     <p>
       I'm a <strong>full-stack software engineer</strong> who loves building new
       stuff, especially in the cloud. In my free time, I like to stay active in
@@ -31,15 +31,37 @@
     </p>
   </section>
   <hr />
-  <section class="content is-medium">
+  <section class="content is-large">
     <p>
-      I <em>sometimes </em>
-      <a class="link is-underlined" href="/blog">blog</a> about stuff that
-      interests me.
+      I write (sometimes) about random stuff that interests me, my personal
+      projects, and my approach to remaining productive. If for whatever reason
+      that actually interests you, check out my
+      <a class="link is-underlined" href="/blog">blog</a>.
     </p>
-    <p>
-      It's mostly tech-oriented, but expect some opinion pieces here and there.
-    </p>
+
+    <p class="title is-4">Recent Posts</p>
+
+    <div class="row columns is-multiline is-equal-height">
+      <div *ngFor="let post of posts" class="column is-4">
+        <a [href]="'/blog/' + post.permalink">
+          <div class="card large">
+            <div class="card-image" [style]="post.thumbnail"></div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <p class="title is-4">{{ post.title }}</p>
+                  <p class="subtitle is-6 has-text-grey">{{ post.date }}</p>
+                </div>
+              </div>
+              <div
+                class="content is-medium has-text-grey"
+                [innerHTML]="post.content.substring(0, 120) + '...'"
+              ></div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
 
     <!-- <p>
       <a class="button is-info is-inline-block mr-3" href="/subscribe"

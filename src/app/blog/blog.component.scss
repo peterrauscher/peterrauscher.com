@@ -20,4 +20,10 @@ a.nostyle:visited {
 
 a:hover .title {
   text-decoration: underline;
+  color: hsl(0, 0%, 21%);
+  cursor: pointer;
+}
+
+a:hover .column {
+  cursor: pointer;
 }
