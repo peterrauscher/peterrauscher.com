@@ -1,7 +1,7 @@
 <div class="main section container pt-0">
   <div class="block is-fullwidth">
-    <h1 class="title is-1">{{ meta.title }}</h1>
-    <p class="has-text-grey">Published {{ meta.date }}</p>
+    <h1 class="title is-1">{{ post.title }}</h1>
+    <p class="has-text-grey">Published {{ post.date }}</p>
   </div>
-  <div class="content" [innerHTML]="content"></div>
+  <div class="content" [innerHTML]="post.content"></div>
 </div>
